@@ -1,0 +1,17 @@
+catkin init -> to initialize workspace
+catkin build -> to build workspace
+catkin_create_pkg <name> -> to create a package
+
+rosrun <packagename> <nodename> - to run <nodename> in ros enviroment
+rostopic list -> displays the topic
+
+rostopic echo /<topicname>
+
+
+*****
+source /opt/ros/noetic/setup.bash -> sourcing ros enviroment
+source ~/ros1_tutorial/ros1_tutorial/catkin_ws/devel/setup.bash -> sourcing <workspace> in ros enviroment
+******
+
+
+
