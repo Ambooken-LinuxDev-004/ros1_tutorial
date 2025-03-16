@@ -1,6 +1,6 @@
 catkin init -> to initialize workspace
 catkin build -> to build workspace
-catkin_create_pkg <name> -> to create a package
+catkin_create_pkg <name> -> to create a package(Note:- Must build the workspace each time when you create a new package)
 
 rosrun <packagename> <nodename> - to run <nodename> in ros enviroment
 rostopic list -> displays the topic
@@ -13,5 +13,18 @@ source /opt/ros/noetic/setup.bash -> sourcing ros enviroment
 source ~/ros1_tutorial/ros1_tutorial/catkin_ws/devel/setup.bash -> sourcing <workspace> in ros enviroment
 ******
 
+rospack list -> it lists all packages that are located in my package
+rospack list | grep <packagename> -> shows the path of the package
+
+catkin clean --orphans -> removes package traces from devel, build & other folders from workspace permanently(note:- it should be deleted from src folder berfore executing this command)
+
+** launch node(to run multiple node at same time)
+uses .launch extension
+it like xml language
+
+roslaunch <packagename> <nodename>(eg. start.launch)
+rosnode list -> lists node that are currently working
+
+rqt(visualisation tool used to show the entire architecture of currently active project)
 
 
