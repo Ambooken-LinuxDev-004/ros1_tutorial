@@ -27,4 +27,10 @@ rosnode list -> lists node that are currently working
 
 rqt(visualisation tool used to show the entire architecture of currently active project)
 
+rostopic info <topic> -> shows datatype of topic
+
+rosmsg info <msg type of topic> -> shows datatype of msg
+
+
+
 
