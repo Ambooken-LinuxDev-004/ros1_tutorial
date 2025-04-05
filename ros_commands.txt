@@ -33,4 +33,18 @@ rosmsg info <msg type of topic> -> shows datatype of msg
 
 
 
+ROS topics -> used for communicate with robot. Robot will keep listening to the last message that you published in topic. publisher is a ROS program that writes a msg into a topic[e.g. /cmd_vel topic (used to send velocity commands)]
+
+Services -> allows you to code a specific functionality for your robot and provide anyone to call it.
+
+Service server -> provides functionality to anyone who wants to use it(call it)
+Service Client -> one who requests service functionality  [rosservice call /service_demo]
+
+Service must be running before you call it [launch before calling]
+
+Actions -> [Similar to services]. here robot can do multiple tasks/actions at the same time (no need to wait for 1 service/action to end for executing another). Actions provide feedback.
+
+Action server must be started before calling.
+
+******** REAL ROBOT LAB ********
 
