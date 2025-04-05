@@ -8,7 +8,9 @@ To navigate packages -> roscd <packagename>
 
 ROS node -> a process that executes ROS program(always launch the node)
 
+ROS Parameter Server -> 
 
+ROS ENviroment Variables -> type "export | grep ROS"
 
 
 rosrun <packagename> <nodename>/<launchfilename> - to run <nodename> in ros enviroment
