@@ -1,11 +1,21 @@
 catkin init -> to initialize workspace
 catkin build -> to build workspace
-catkin_create_pkg <name> -> to create a package(Note:- Must build the workspace each time when you create a new package)
+catkin_create_pkg <name> [<dependencies> like rospy] -> to create a package(Note:- Must build the workspace each time when you create a new package)
 
-rosrun <packagename> <nodename> - to run <nodename> in ros enviroment
+ROS package -> all the files that a specific ROS program contains. It contains launch folder, src folder, package.xml, CMakeLists.txt etc..
+
+To navigate packages -> roscd <packagename>
+
+ROS node -> a process that executes ROS program(always launch the node)
+
+
+
+
+rosrun <packagename> <nodename>/<launchfilename> - to run <nodename> in ros enviroment
 rostopic list -> displays the topic
 
-rostopic echo /<topicname>
+rostopic echo /<topicname> -> print messages to screen
+rostopic pub -> publish data to topic [eg. rostopic pub /cmd_vel geometry_msgs/Twist]
 
 
 *****
@@ -45,6 +55,9 @@ Service must be running before you call it [launch before calling]
 Actions -> [Similar to services]. here robot can do multiple tasks/actions at the same time (no need to wait for 1 service/action to end for executing another). Actions provide feedback.
 
 Action server must be started before calling.
+
+
+Launch file -> contains node tag [e.g. <node pkg="" type="" name="" output=""></node>]
 
 ******** REAL ROBOT LAB ********
 
