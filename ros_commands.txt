@@ -14,9 +14,16 @@ ROS ENviroment Variables -> type "export | grep ROS"
 
 
 rosrun <packagename> <nodename>/<launchfilename> - to run <nodename> in ros enviroment
-rostopic list -> displays the topic
 
-rostopic echo /<topicname> -> print messages to screen
+rostopic list -> displays the topic
+rostopic -h -> shows the list of commands and it's funtion/purpose regarding rostopic
+
+rostopic echo /<topicname> -> print messages to screen(To read the info that is being published into the </topicname>)
+rostopic echo /<topicname> -n1 -> publish/shows the last message that is published into the topic
+
+rostopic info </topicname> -> to get info about the </topicname> [like Type of msg that this topic uses, node that is either publishing/subscribing into the current </topicname>] [Also shows the node (if subscribed) that uses this </topicname>]
+
+
 rostopic pub -> publish data to topic [eg. rostopic pub /cmd_vel geometry_msgs/Twist]
 
 
@@ -39,9 +46,9 @@ rosnode list -> lists node that are currently working
 
 rqt(visualisation tool used to show the entire architecture of currently active project)
 
-rostopic info <topic> -> shows datatype of topic
 
 rosmsg info <msg type of topic> -> shows datatype of msg
+rosmsg show <message> -> to get info about a message[e.g rosmsg show std_msgs/Int32 --- here std_msgs is a package containing class Int32]
 
 
 
