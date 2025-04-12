@@ -1,0 +1,3 @@
+<launch>
+    <node name="simple_topic_publisher_node" type="simple_topic_publisher.py" pkg="simple_topic" output="screen"></node>
+</launch>
