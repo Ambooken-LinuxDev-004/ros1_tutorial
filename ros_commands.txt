@@ -13,7 +13,8 @@ ROS Parameter Server ->
 ROS ENviroment Variables -> type "export | grep ROS"
 
 
-rosrun <packagename> <nodename>/<launchfilename> - to run <nodename> in ros enviroment
+rosrun <packagename> <nodename> - to run <nodename> in ros enviroment
+roslaunch <packages> <launchfilename> to run <launchfilename> in ros enviroment
 
 rostopic list -> displays the topic
 rostopic -h -> shows the list of commands and it's funtion/purpose regarding rostopic
@@ -25,6 +26,8 @@ rostopic info </topicname> -> to get info about the </topicname> [like Type of m
 
 
 rostopic pub -> publish data to topic [eg. rostopic pub /cmd_vel geometry_msgs/Twist]
+
+
 
 
 *****
@@ -50,7 +53,9 @@ rqt(visualisation tool used to show the entire architecture of currently active 
 rosmsg info <msg type of topic> -> shows datatype of msg
 rosmsg show <message> -> to get info about a message[e.g rosmsg show std_msgs/Int32 --- here std_msgs is a package containing class Int32]
 
+Subscriber is a node that reads information from a topic
 
+rosnode kill <nodename> -> to stop the node or topic from publishing
 
 ROS topics -> used for communicate with robot. Robot will keep listening to the last message that you published in topic. publisher is a ROS program that writes a msg into a topic[e.g. /cmd_vel topic (used to send velocity commands)]
 
