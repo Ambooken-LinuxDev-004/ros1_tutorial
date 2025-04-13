@@ -14,7 +14,7 @@ ROS ENviroment Variables -> type "export | grep ROS"
 
 
 rosrun <packagename> <nodename> - to run <nodename> in ros enviroment
-roslaunch <packages> <launchfilename> to run <launchfilename> in ros enviroment
+roslaunch <packages> <launchfilename> to run <launchfilename> in ros enviroment and to start many nodes at once
 
 rostopic list -> displays the topic
 rostopic -h -> shows the list of commands and it's funtion/purpose regarding rostopic
@@ -25,10 +25,12 @@ rostopic echo /<topicname> -n1 -> publish/shows the last message that is publish
 rostopic info </topicname> -> to get info about the </topicname> [like Type of msg that this topic uses, node that is either publishing/subscribing into the current </topicname>] [Also shows the node (if subscribed) that uses this </topicname>]
 
 
-rostopic pub -> publish data to topic [eg. rostopic pub /cmd_vel geometry_msgs/Twist]
+rostopic pub -> publish data to topic [eg. rostopic pub /cmd_vel geometry_msgs/Twist] 
+rostopic pub [topic] [msg_type] [args]
+rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist -- '[2.0, 0.0, 0.0]' '[, represents0.0, 0.0, 1.8]' -> '-1' rostopic to only publish one message then exit
 
 
-
+rosed [package_name] [filename] -> allows you to directly edit a file within a package by using the package name rather than having to type the entire path to the package [e.g. rosed roscpp Logger.msg]
 
 *****
 source /opt/ros/noetic/setup.bash -> sourcing ros enviroment
