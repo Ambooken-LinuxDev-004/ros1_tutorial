@@ -19,11 +19,21 @@ while not rospy.is_shutdown():
 import rospy
 from std_msgs.msg import String
 
-rospy.init_node("string_publisher_node")
-pub = rospy.Publisher("string_topic", String, queue_size=10)
-msg = String()
-msg.data = "Joe"
 
-while rospy.is_shutdown():
-    pub.publish(msg.data)
-    rospy.sleep(1)
+def talker():
+    rospy.init_node("string_publisher_node", anonymous=True)
+    pub = rospy.Publisher("string_topic", String, queue_size=10)
+    rate = rospy.Rate(10)
+    msg = String()
+    msg.data = str
+    while rospy.is_shutdown():
+        msg = "Hello %s" % rospy.get_time()
+        rospy.loginfo(msg)
+        pub.publish(msg)
+        rospy.sleep()
+
+if __name__ == '__main__':
+    try:
+        talker()
+    except rospy.ROSInterruptException:
+        pass

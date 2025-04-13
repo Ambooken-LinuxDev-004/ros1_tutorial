@@ -21,9 +21,12 @@ import rospy
 from std_msgs.msg import String
 
 def reply(msg):
-    print("Hello " + msg + ", Welcome to ROS!!...")
+    rospy.loginfo(rospy.get_caller_id() + "Welcome to ROS %s", msg.data)
 
-rospy.init_node("string_subscriber_node")
-rospy.Subscriber("string_topic", String, reply)
+def listener():
+    rospy.init_node("string_subscriber_node", anonymous=True)
+    rospy.Subscriber("string_topic", String, reply)
+    rospy.spin()
 
-rospy.spin()
+if __name__ == '__main__':
+    listener()
