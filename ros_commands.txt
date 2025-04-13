@@ -40,6 +40,9 @@ source ~/ros1_tutorial/ros1_tutorial/catkin_ws/devel/setup.bash -> sourcing <wor
 rospack list -> it lists all packages that are located in my package
 rospack list | grep <packagename> -> shows the path of the package
 
+roscp -> commandline tool for copying files from one package to another(roscp [package_name] [file_to_copy_path] [copy_path])
+[e.g. roscp rospy_tutorials AddTwoInts.srv srv/AddTwoInts.srv]
+
 catkin clean --orphans -> removes package traces from devel, build & other folders from workspace permanently(note:- it should be deleted from src folder berfore executing this command)
 
 ** launch node(to run multiple node at same time)
