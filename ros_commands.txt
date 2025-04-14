@@ -80,3 +80,12 @@ Launch file -> contains node tag [e.g. <node pkg="" type="" name="" output=""></
 
 ******** REAL ROBOT LAB ********
 
+urdf -> all measurements in URDF are in International Unit System[meters -> distance, radians -> angles, kilogram -> weight]
+joint types -> revolute, prismatic, fixed, floating and planar
+
+3 basic geometry shapes -> box, cylinder and sphere
+
+<cylinder radius="0.06" length="0.09" />
+<box size="0.0005 0.0005 0.0005" /> x-length y-length and z-length
+<sphere radius="0.06" />
+
